@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Núbia Paiva🎀</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+  }
+
+  body {
+    background-color: #7a1f4d;
+    color: #fff0f5;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+  }
+
+  aside {
+    background-color: #4a1030;
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+  }
+
+  aside h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #ff9fc0;
+  }
+
+  aside p.tagline {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #ffd6e5;
+  }
+
+  .foto-espaco {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #61163d;
+    border: 2px dashed #ff9fc0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffd6e5;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 8px;
+  }
+
+  .foto-espaco img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+  }
+
+  main {
+    padding: 40px 50px;
+  }
+
+  section {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #a8467a;
+  }
+
+  section:last-child {
+    border-bottom: none;
+  }
+
+  section h2 {
+    color: #ff9fc0;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+
+  section p {
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 450px;
+  }
+
+  input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #ffe4ee;
+    color: #4a1030;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 90px;
+  }
+
+  button {
+    background-color: #ff9fc0;
+    color: #4a1030;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #ffc2d9;
+  }
+
+  .fim-btn {
+    max-width: 200px;
+  }
+
+  #mensagem-fim {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ff9fc0;
+    display: none;
+  }
+
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #4a1030;
+    color: #ffd6e5;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 700px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="layout">
+    <aside>
+      <h1>Núbia Paiva</h1>
+      <p class="tagline">Estudante • Atleta de handebol • Futura profissional de Educação Física</p>
+      <div class="foto-espaco"><img src="foto1.png"></div>
+      <div class="foto-espaco"><img src="foto2.png"></div>
+    </aside>
+
+    <main>
+      <section>
+        <h2>Sobre mim</h2>
+        <p>
+          Meu nome é <strong>Núbia Paiva</strong>, tenho <strong>17 anos</strong> e sou de <strong>Mococa</strong>.
+          Atualmente, estou cursando o <strong>3º ano do Ensino Médio</strong>, integrado ao curso de
+          <strong>Desenvolvimento de Sistemas</strong> pelo <strong>SENAI</strong>.
+        </p>
+        <p>
+          Sou uma pessoa extrovertida, proativa e muito criativa, características que me motivam a enfrentar
+          desafios, aprender constantemente e colaborar com as pessoas ao meu redor. Sou apaixonada por esportes
+          e adoro praticar atividades físicas. Entre todas as modalidades, o <strong>handebol</strong> é a minha
+          grande paixão. Faço parte de uma equipe que representa a cidade de Mococa em competições, experiência
+          que contribui para o desenvolvimento da minha disciplina, comprometimento e trabalho em equipe.
+        </p>
+        <p>
+          Embora eu goste muito do curso de Desenvolvimento de Sistemas e reconheça o quanto ele tem ampliado meus
+          conhecimentos e habilidades, pretendo seguir uma carreira diferente no futuro. Meu objetivo é cursar
+          <strong>Educação Física</strong> e atuar profissionalmente nessa área, unindo minha paixão pelo esporte
+          ao desejo de incentivar a qualidade de vida e o bem-estar das pessoas. Ainda assim, considero minha
+          formação atual uma grande oportunidade de aprendizado e crescimento pessoal e profissional, pois os
+          conhecimentos adquiridos certamente serão valiosos em qualquer caminho que eu escolher.
+        </p>
+      </section>
+
+      <section>
+        <h2>Entre em contato</h2>
+        <form id="form-contato">
+          <input type="text" id="nome" placeholder="Seu nome" required>
+          <input type="email" id="email" placeholder="Seu e-mail" required>
+          <textarea id="mensagem" placeholder="Sua mensagem"></textarea>
+          <button type="submit">Enviar mensagem</button>
+        </form>
+      </section>
+
+      <section>
+        <button class="fim-btn" onclick="mostrarMensagemFim()">FIM!</button>
+        <p id="mensagem-fim">Obrigada por acompanha, foi uma prazer tê-lo aqui!</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2026 Núbia Paiva
+  </footer>
+
+  <script>
+    document.getElementById('form-contato').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+
+      if (nome === '' || email === '') {
+        alert('Por favor, preencha ao menos o nome e o e-mail.');
+        return;
+      }
+
+      alert('Mensagem enviada com sucesso! Em breve entrarei em contato.');
+      this.reset();
+    });
+
+    function mostrarMensagemFim() {
+      const msg = document.getElementById('mensagem-fim');
+      msg.style.display = 'block';
+      msg.textContent = "Obrigada por acompanha, foi uma prazer tê-lo aqui!";
+    }
+  </script>
+
+</body>
+</html>
